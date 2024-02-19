@@ -1,0 +1,71 @@
+.pokedex {
+    padding-bottom: 25px;
+}
+
+.poke__header {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 10px;
+
+    & h3 {
+        font-size: x-large;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    & div {
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+.poke__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.input__text {
+    text-align: center;
+    width: 300px;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.btn__search {
+    padding: 0.75rem 0.75rem;
+    border-radius: 0 5px 5px 0;
+    background-color: #d93f3f;
+    color: #fefafa;
+    font-size: 0.85rem;
+    height: 2.35rem;
+    text-transform: uppercase;
+}
+
+.input__select {
+    width: 400px;
+    height: 2.4rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    background-color: #fff;
+}
