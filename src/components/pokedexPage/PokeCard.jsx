@@ -18,31 +18,33 @@ const PokeCard = ({url}) => {
     }
     
   return (
-    <article onClick={handleClick} className='poke__card'>
-      <div className={pokemon?.types[0].type.name}></div>
-        <figure>
-          <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="pokemon photo" />
-        </figure>
-        <h3>{pokemon?.name}</h3>
-        <ul className='poke__types'>
-          {
-            pokemon?.types.map(type => (
-              <li key={type.type.url} className={`slot${type.slot}`}>
-                {type.type.name}
-                </li>
-            ))
-          }
-        </ul>
-        <p>type</p>
-        <hr />
-        <ul className='poke__stats'>
-          {
-            pokemon?.stats.map(stat => (
-              !stat.stat.name.includes('special') &&
-              <li key={stat.stat.url}>{stat.stat.name} <span>{stat.base_stat}</span> </li>
-            ))
-          }
-        </ul>
+    <article 
+        onClick={handleClick} 
+        className={`poke__card border-${pokemon?.types[0].type.name}`}>
+        <div className={pokemon?.types[0].type.name}></div>
+          <figure>
+            <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="pokemon photo" />
+          </figure>
+          <h3>{pokemon?.name}</h3>
+          <ul className='poke__types'>
+            {
+              pokemon?.types.map(type => (
+                <li key={type.type.url} className={`slot${type.slot}`}>
+                  {type.type.name}
+                  </li>
+              ))
+            }
+          </ul>
+          <p>type</p>
+          <hr />
+          <ul className='poke__stats'>
+            {
+              pokemon?.stats.map(stat => (
+                !stat.stat.name.includes('special') &&
+                <li key={stat.stat.url}>{stat.stat.name} <span>{stat.base_stat}</span> </li>
+              ))
+            }
+          </ul>
     </article>
   )
 }

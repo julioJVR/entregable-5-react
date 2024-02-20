@@ -1,6 +1,6 @@
 .poke__card {
-    background-color: ghostwhite;
     border: 5px solid;
+    border-color: blue;
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -39,17 +39,27 @@
     padding: 15px;
     width: 85%;
     gap: 10px;
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-.poke__stats li {
+.poke__types {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 5px;
 }
+
 .slot2::before {
     content: '/ ';
 }
 
 /*--- colores de fondo dinamicos de las cards*/
+
+.rock {
+    background-color: rosybrown;
+}
 
 .grass {
     background-color: green;
@@ -81,4 +91,40 @@
 
 .ground {
     background-color: burlywood;
+}
+
+.border-rock {
+    border-color: rosybrown;
+}
+
+.border-grass {
+    border-color: green;
+}
+
+.border-fire {
+    border-color: red;
+}
+
+.border-water {
+    border-color: dodgerblue;
+}
+
+.border-bug {
+    border-color: aliceblue;
+}
+
+.border-normal {
+    border-color: antiquewhite;
+}
+
+.border-electric {
+    border-color: yellowgreen;
+}
+
+.border-poison {
+    border-color: violet;
+}
+
+.border-ground {
+    border-color: burlywood;
 }
