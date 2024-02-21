@@ -42,31 +42,34 @@ const PokedexPage = () => {
   }
 
   return (
-    <div className='pokedex'>
-      <HeaderImg />
-      <header className='poke__header'>
-        <h3><span>Bienvenido {trainerName}, </span>Aqui podras encontrar tu pokemon favorito!!!</h3>
-        <div className='form__container'>
-          <form onSubmit={handleSubmit}>
-            <input type="text" ref={textInput} className='input__text'/>
-            <button className='btn__search'>Buscar</button>
-          </form>
-          <SelectType
-            setSelectValue={setSelectValue}
-          />
-        </div>
-      </header>
-      <section className='poke__container'>
-        {
-          cbFilter()?.map(poke => (
-            <PokeCard
-              key={poke.url}
-              url={poke.url}
+      <div className='pokedex'>
+        <HeaderImg />
+
+        <header className='poke__header'>
+          <h3><span>Bienvenido {trainerName}, </span>Aqui podras encontrar tu pokemon favorito!!!</h3>
+          
+          <div className='poke__container'>
+            <form onSubmit={handleSubmit} className='form__container'>
+              <input type="text" ref={textInput} className='input__text'/>
+              <button className='btn__search'>Buscar</button>
+            </form>
+            <SelectType
+              setSelectValue={setSelectValue}
             />
-          ))
-        }
-      </section>
-    </div>
+          </div>
+        </header>
+        
+        <section className='poke__container'>
+          {
+            cbFilter()?.map(poke => (
+              <PokeCard
+                key={poke.url}
+                url={poke.url}
+              />
+            ))
+          }
+        </section>
+      </div>
   )
 }
 

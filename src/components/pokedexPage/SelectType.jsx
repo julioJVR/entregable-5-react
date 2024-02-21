@@ -20,18 +20,18 @@ const SelectType = ({setSelectValue}) => {
         dispatch(setPokemonName(''));
     }
     
-  return (
-    <select onChange={handleChange} ref={textSelect} className='input__select'>
-        <option value="allPokemons">All Pokemos</option>
-        {
-            types?.results.map(type => (
-                <option key={type.url} value={type.url}>
-                    {type.name}
-                </option>
-            ))
-        }
-    </select>
-  )
+    return (
+        <select onChange={handleChange} ref={textSelect} className='input__select'>
+            <option value="allPokemons">All Pokemos</option>
+            {
+                types?.results.map(type => (
+                    <option key={type.url} value={type.url}>
+                        {type.name}
+                    </option>
+                ))
+            }
+        </select>
+    )
 }
 
 export default SelectType;

@@ -24,17 +24,20 @@ const HomePage = () => {
       <figure className='homepage__img'>
         <img src={pokedexTitle} alt="pokedex logo" />
       </figure>
+
         <div className='body'>
-          <div className='title'>
-            <h1>!Hola entrenador¡</h1>
-            <br />
-            <h3>Para poder comenzar, dame tu nombre</h3>
-          </div>
-        <form onSubmit={handleSubmit} className='form__homepage'>
-          <input type="text" ref={textInput} />
-          <button>Comenzar</button>
-        </form>
+            <div className='title'>
+              <h1>!Hola entrenador¡</h1>
+              <br />
+              <h3>Para poder comenzar, dame tu nombre</h3>
+            </div>
+
+            <form onSubmit={handleSubmit} className='form__homepage'>
+              <input type="text" ref={textInput} />
+              <button>Comenzar</button>
+            </form>
         </div>
+
         <footer className='footer'>
             <FooterLogo />
         </footer>

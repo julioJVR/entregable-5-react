@@ -6,7 +6,6 @@ import PokeIdPage from './pages/PokeIdPage';
 import ProtectedRoutes from './pages/ProtectedRoutes';
 
 function App() {
-  
   return (
     <Routes>
       <Route path='/' element={<HomePage/>}/>

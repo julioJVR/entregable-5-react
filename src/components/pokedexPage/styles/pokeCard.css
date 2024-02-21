@@ -1,37 +1,42 @@
 .poke__card {
     border: 5px solid;
     border-color: blue;
+    border-radius: 25px;
     width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 25px;
     cursor: pointer;
     gap: 5px;
     position: relative;
+
+    & figure {
+        position: relative;
+        width: 150px;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    & hr {
+        width: 85%;
+    }
+
+    & div {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    & h3 {
+        text-transform: capitalize;
+    }
 }
+
 .poke__card:hover {
     transform: scale(1.05);
 }
-.poke__card div {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    border-radius: 20px 20px 0 0;
-}
-.poke__card figure {
-    position: relative;
-    width: 150px;
-    z-index: 10;
-    overflow: hidden;
-}
-.poke__types {
-    display: flex;
-    gap: 5px;
-}
-.poke__card hr {
-    width: 85%;
-}
+
 .poke__stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -44,8 +49,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-transform: uppercase;
+        color: #9f9f9f;
+        font-size: 0.85rem;
+    }
+
+    & span {
+        font-size: 1.135rem;
     }
 }
+
 .poke__types {
     display: flex;
     gap: 5px;
@@ -55,7 +68,17 @@
     content: '/ ';
 }
 
-/*--- colores de fondo dinamicos de las cards*/
+.dark {
+    background-color: #15202b;
+}
+
+.border-dark {
+    border-color: #15202b;
+}
+
+.color-dark {
+    color: #15202b;
+}
 
 .rock {
     background-color: rosybrown;
@@ -74,11 +97,11 @@
 }
 
 .bug {
-    background-color: aliceblue;
+    background-color: #252330;
 }
 
 .normal {
-    background-color: antiquewhite;
+    background-color: #b44b58;
 }
 
 .electric {
@@ -90,7 +113,7 @@
 }
 
 .ground {
-    background-color: burlywood;
+    background-color: #9a8b65;
 }
 
 .border-rock {
@@ -110,11 +133,11 @@
 }
 
 .border-bug {
-    border-color: aliceblue;
+    border-color: #252330;
 }
 
 .border-normal {
-    border-color: antiquewhite;
+    border-color: #b44b58;
 }
 
 .border-electric {
@@ -126,5 +149,41 @@
 }
 
 .border-ground {
-    border-color: burlywood;
+    border-color: #9a8b65;
+}
+
+.color-rock {
+    color: rosybrown;
+}
+
+.color-grass {
+    color: green;
+}
+
+.color-fire {
+    color: red;
+}
+
+.color-water {
+    color: dodgerblue;
+}
+
+.color-bug {
+    color: #252330;
+}
+
+.color-normal {
+    color: #b44b58;
+}
+
+.color-electric {
+    color: yellowgreen;
+}
+
+.color-poison {
+    color: violet;
+}
+
+.color-ground {
+    color: #9a8b65;
 }
