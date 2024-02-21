@@ -5,59 +5,59 @@ import './styles/pokeCard.css';
 
 const PokeCard = ({url}) => {
 
-    const [pokemon, getPokemon] = useFetch();
+        const [pokemon, getPokemon] = useFetch();
 
-    const navigate = useNavigate();
+        const navigate = useNavigate();
 
-    useEffect(() => {
-      getPokemon(url);
-    }, []);
+        useEffect(() => {
+        getPokemon(url);
+        }, []);
 
-    const handleClick = () => {
-      navigate(`/pokedex/${pokemon.id}`);
-    }
-    
-    return (
-      <article
-          onClick={handleClick}
-          className={`poke__card border-${pokemon?.types[0].type.name}`}
-      >
-          <div className={pokemon?.types[0].type.name}></div>
-          <figure>
-              <img
-                  src={pokemon?.sprites.other['official-artwork'].front_default}
-                  alt="pokemon"
-              />
-          </figure>
+        const handleClick = () => {
+        navigate(`/pokedex/${pokemon.id}`);
+        }
+        
+        return (
+        <article
+            onClick={handleClick}
+            className={`poke__card border-${pokemon?.types[0].type.name}`}
+        >
+            <div className={pokemon?.types[0].type.name}></div>
+            <figure>
+                <img
+                    src={pokemon?.sprites.other['official-artwork'].front_default}
+                    alt="pokemon"
+                />
+            </figure>
 
-          <h3>{pokemon?.name}</h3>
+            <h3>{pokemon?.name}</h3>
 
-          <ul className="poke__types">
-              {pokemon?.types.map(type => (
-                  <li key={type.type.url} className={`slot${type.slot}`}>
-                      {type.type.name}
-                  </li>
-              ))}
-          </ul>
+            <ul className="poke__types">
+                {pokemon?.types.map(type => (
+                    <li key={type.type.url} className={`slot${type.slot}`}>
+                        {type.type.name}
+                    </li>
+                ))}
+            </ul>
 
-          <p>Type</p>
-          <hr />
-          <ul className="poke__stats">
-              {
-                  pokemon?.stats.map(stat => (
-                      !stat.stat.name.includes('special') &&
-                      <li key={stat.stat.url}>
-                          {stat.stat.name}
-                          <h3
-                              className={`color-${pokemon?.types[0].type.name}`}
-                          >
-                              {stat.base_stat}
-                          </h3>
-                      </li>
-                  ))}
-          </ul>
-      </article>
-    );
+            <p>Type</p>
+            <hr />
+            <ul className="poke__stats">
+                {
+                    pokemon?.stats.map(stat => (
+                        !stat.stat.name.includes('special') &&
+                        <li key={stat.stat.url}>
+                            {stat.stat.name}
+                            <h3
+                                className={`color-${pokemon?.types[0].type.name}`}
+                            >
+                                {stat.base_stat}
+                            </h3>
+                        </li>
+                    ))}
+            </ul>
+        </article>
+        );
 }
 
 export default PokeCard;
