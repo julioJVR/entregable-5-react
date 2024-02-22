@@ -1,0 +1,53 @@
+.img {
+    display: grid;
+    place-items: center;
+    width: 300px;
+}
+
+.name {
+    background-color:white;
+    color: black;
+    justify-content: center;
+}
+.tipo {
+    background-color:white;
+    color: black;
+    padding: 4px 6px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.skills {
+    background-color: white;
+    color: black;
+    padding: 4px 6px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.statistics {
+    gap: 10px;
+}
+
+.movements {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+
+.list {
+    list-style-type: upper-roman;
+}
+
+.li::marker {
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .input__text {
+        width: 100%;
+    }
+}
